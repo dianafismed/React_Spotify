@@ -23,7 +23,23 @@ a {
   align-items: center;
 }
 
-/*  */
+.header__link--hover {
+  text-decoration: underline;
+}
+
+/*    Main    */
+.main {
+}
+
+.main__texts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__link--hover {
+  text-decoration: underline;
+}
 
 /*
 :root {
