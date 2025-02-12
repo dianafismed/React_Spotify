@@ -499,7 +499,7 @@ img {
   }
 }
 
-/*    Reset    
+/*    Reset
 
 * {
   margin: 0;
@@ -523,7 +523,7 @@ a {
   flex-direction: column;
 }
 
-/*    Header    
+/*    Header
 .header {
   padding: 10px 20px;
   display: flex;
@@ -535,7 +535,7 @@ a {
   text-decoration: underline;
 }
 
-/*    Main    
+/*    Main
 .main {
   background-image: linear-gradient(to bottom, #062d14, black);
   padding: 20px;
