@@ -6,11 +6,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-const Player = () => {
+const Player = ({ duration, ramdomIdFromArtist }) => {
   return (
     <div className="player">
       <div className="player__controllers">
-        <Link to="/song/1">
+        <Link to={`/song/${ramdomIdFromArtist}`}>
           <FontAwesomeIcon
             className="player__icon player__icon"
             icon={faBackwardStep}
@@ -22,7 +22,7 @@ const Player = () => {
           icon={faCirclePlay}
         />
 
-        <Link to="/song/3">
+        <Link to={`/song/${ramdomIdFromArtist}`}>
           <FontAwesomeIcon
             className="player__icon player__icon"
             icon={faForwardStep}
@@ -31,11 +31,11 @@ const Player = () => {
       </div>
 
       <div className="player__progress">
-        <p>Inicio</p>
+        <p>00:00</p>
         <div className="player__bar">
           <div className="player__bar--progress"></div>
         </div>
-        <p>Final</p>
+        <p>{duration}</p>
       </div>
     </div>
   );

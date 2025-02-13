@@ -6,13 +6,23 @@ import { artistArray } from "../assets/database/artists";
 const Song = () => {
   const { id } = useParams();
 
-  const { image, name, duration, artist, audio, index } = songsArray.filter(
+  const { image, name, artist, duration } = songsArray.filter(
     (currSongObj) => currSongObj.id === Number(id)
   )[0];
 
   const artistObj = artistArray.filter(
-    (currArtistObj) => currArtistObj.id === artist
+    (currArtistObj) => currArtistObj.name === artist
   )[0];
+
+  const songsArrayFromArtist = songsArray.filter(
+    (currSongObj) => currSongObj.artist === artist
+  );
+
+  const ramdomIndex = Math.floor(
+    Math.random() * (songsArrayFromArtist.length - 1)
+  );
+
+  const ramdomIdFromArtist = songsArrayFromArtist[ramdomIndex].id;
 
   return (
     <div className="song">
@@ -26,17 +36,17 @@ const Song = () => {
         <Link to={`/artist/${artistObj.id}`} className="song__artist-image">
           <img
             src={artistObj.image}
-            alt={`Imagem da música ${artistObj.name}`}
+            alt={`Imagem da música ${artist}`}
             width={75}
             height={75}
           />
         </Link>
 
-        <Player />
+        <Player duration={duration} ramdomIdFromArtist={ramdomIdFromArtist} />
 
         <div>
-          <p className="song__name">Nome da musica</p>
-          <p>Nome do Artista</p>
+          <p className="song__name">{name}</p>
+          <p>{artist}</p>
         </div>
       </div>
     </div>
