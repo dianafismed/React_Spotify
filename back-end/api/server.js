@@ -1,9 +1,13 @@
 import express from "express";
+import cors from "cors"; // é um middleware
 import { db } from "./connect.js";
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
+
+// Requisições
 app.get("/", (req, res) => {
   res.send("Olá Mundo !");
 });

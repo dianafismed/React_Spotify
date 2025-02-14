@@ -26,5 +26,5 @@ const responseArtists = await db
 
 const responseSongs = await db.collection("songs").insertMany(newSongsArray);
 
-console.log(responseArtists);
-console.log(responseSongs);
+//console.log(responseArtists);
+//console.log(responseSongs);
