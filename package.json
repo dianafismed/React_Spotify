@@ -1,5 +1,17 @@
 {
   "dependencies": {
     "mongodb": "^6.13.0"
-  }
+  },
+  "name": "spotfy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "build": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
