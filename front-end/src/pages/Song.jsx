@@ -6,7 +6,7 @@ import { artistArray } from "../assets/database/artists";
 const Song = () => {
   const { id } = useParams();
 
-  const { image, name, artist, duration } = songsArray.filter(
+  const { image, name, artist, duration, audio } = songsArray.filter(
     (currSongObj) => currSongObj._id === id
   )[0];
 
@@ -42,7 +42,11 @@ const Song = () => {
           />
         </Link>
 
-        <Player duration={duration} ramdomIdFromArtist={ramdomIdFromArtist} />
+        <Player
+          duration={duration}
+          ramdomIdFromArtist={ramdomIdFromArtist}
+          audio={audio}
+        />
 
         <div>
           <p className="song__name">{name}</p>
