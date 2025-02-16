@@ -26,7 +26,7 @@ app.get("/api/songs", async (req, res) => {
 // Rota para não desenvolvedor
 app.use(express.static(path.join(__dirname, "../front-end/dist")));
 app.get("*", async (req, res) => {
-  res.send(path.join(__dirname, "../front-end/dist"));
+  res.send(path.join(__dirname, "../front-end/dist/index.html"));
 });
 
 // Seleciono a porta que será usada
